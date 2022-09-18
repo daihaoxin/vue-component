@@ -14,9 +14,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/**/*",
-    "typings/**/*.d.ts",
-    "__tests__/**/*"
-  ]
+  "include": ["src/**/*", "typings/**/*.d.ts", "__tests__/**/*"]
 }

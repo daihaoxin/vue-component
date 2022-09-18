@@ -14,8 +14,6 @@ describe("Test MyButton", () => {
         },
       },
     });
-    expect(wrapper.findComponent({ name: "MyButton" }).text()).toContain(
-      "MyButton"
-    );
+    expect(wrapper.findComponent({ name: "MyButton" }).text()).toContain("MyButton");
   });
 });

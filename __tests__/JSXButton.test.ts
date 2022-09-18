@@ -13,8 +13,6 @@ describe("Test JSXButton", () => {
         },
       },
     });
-    expect(wrapper.findComponent({ name: JSXButton.name }).text()).toContain(
-      "JSX"
-    );
+    expect(wrapper.findComponent({ name: JSXButton.name }).text()).toContain("JSX");
   });
 });

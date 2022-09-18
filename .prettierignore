@@ -1,0 +1,10 @@
+.husky
+.eslintignore
+.gitignore
+.prettierignore
+.idea
+node_modules
+pnpm-lock.yaml
+package-lock.json
+dist
+build

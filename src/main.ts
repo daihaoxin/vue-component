@@ -1,9 +1,9 @@
-import MyButton from './MyButton';
-import JSXButton from './JSXButton';
-import SFCButton from './my-button';
-import { type App } from 'vue';
-import './test.css';
-import './style.less';
+import MyButton from "./MyButton";
+import JSXButton from "./JSXButton";
+import SFCButton from "./my-button";
+import { type App } from "vue";
+import "./test.css";
+import "./style.less";
 export { MyButton, JSXButton, SFCButton };
 export default {
   install(app: App) {

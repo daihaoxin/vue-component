@@ -1,8 +1,8 @@
-import SFCButton from '..';
-import { mount } from '@vue/test-utils';
+import SFCButton from "..";
+import { mount } from "@vue/test-utils";
 
-describe('Test JSXButton', () => {
-  test('content', () => {
+describe("Test JSXButton", () => {
+  test("content", () => {
     const Comp = {
       template: `<div><SFCButton></SFCButton></div>`,
     };
@@ -13,6 +13,6 @@ describe('Test JSXButton', () => {
         },
       },
     });
-    expect(wrapper.findComponent({ name: SFCButton.name }).text()).toContain('Sfc');
+    expect(wrapper.findComponent({ name: SFCButton.name }).text()).toContain("Sfc");
   });
 });

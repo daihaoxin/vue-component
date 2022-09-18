@@ -1,95 +1,77 @@
 module.exports = {
-    // type 类型
-    types: [
-        { value: 'feat', name: '✨ 新增产品功能' },
-        { value: 'fix', name: '  修复 bug' },
-        { value: 'docs', name: '  文档的变更' },
-        {
-            value: 'style',
-            name:
-                '  不改变代码功能的变动(如删除空格、格式化、去掉末尾分号等)',
-        },
-        {
-            value: 'refactor',
-            name: '♻ 重构代码。不包括 bug 修复、功能新增',
-        },
-        {
-            value: 'perf',
-            name: '⚡ 性能优化',
-        },
-        { value: 'test', name: '✅ 添加、修改测试用例' },
-        {
-            value: 'build',
-            name: ' • 构建流程、外部依赖变更，比如升级 npm 包、修改 webpack 配置'
-        },
-        { value: 'ci', name: '  修改了 CI 配置、脚本' },
-        {
-            value: 'chore',
-            name: '对构建过程或辅助工具和库的更改,不影响源文件、测试用例的其他操作',
-        },
-        { value: 'revert', name: '⏪ 回滚 commit' },
-    
-    ],
-    
-    // scope 类型，针对 React 项目
-    scopes: [
-        ['components', '组件相关'],
-        ['hooks', 'hook 相关'],
-        ['hoc', 'HOC'],
-        ['utils', 'utils 相关'],
-        ['antd', '对 antd 主题的调整'],
-        ['element-ui', '对 element-ui 主题的调整'],
-        ['styles', '样式相关'],
-        ['deps', '项目依赖'],
-        ['auth', '对 auth 修改'],
-        ['other', '其他修改'],
-        // 如果选择 custom ,后面会让你再输入一个自定义的 scope , 也可以不设置此项， 把后面的 allowCustomScopes 设置为 true
-        ['custom', '以上都不是？我要自定义'],
-    ].map(([value, description]) => {
-        return {
-            value,
-            name: `${value.padEnd(30)} (${description})`
-        };
-    }),
-    
-    // allowTicketNumber: false,
-    // isTicketNumberRequired: false,
-    // ticketNumberPrefix: 'TICKET-',
-    // ticketNumberRegExp: '\\d{1,5}',
-    
-    // 可以设置 scope 的类型跟 type 的类型匹配项，例如: 'fix'
-    /*
-     scopeOverrides: {
-     fix: [
-     { name: 'merge' },
-     { name: 'style' },
-     { name: 'e2eTest' },
-     { name: 'unitTest' }
-     ]
-     },
-     */
-    // 覆写提示的信息
-    messages: {
-        type: "请确保你的提交遵循了原子提交规范！\n选择你要提交的类型:",
-        scope: '\n选择一个 scope (可选):',
-        // 选择 scope: custom 时会出下面的提示
-        customScope: '请输入自定义的 scope:',
-        subject: '填写一个简短精炼的描述语句:\n',
-        body: '添加一个更加详细的描述，可以附上新增功能的描述或 bug 链接、截图链接 (可选)。使用 "|" 换行:\n',
-        breaking: '列举非兼容性重大的变更 (可选):\n',
-        footer: '列举出所有变更的 ISSUES CLOSED  (可选)。 例如.: #31, #34:\n',
-        confirmCommit: '确认提交?',
+  disableEmoji: true,
+  list: ["feat", "fix", "refactor", "perf", "style", "test", "chore", "ci", "release"],
+  maxMessageLength: 64,
+  minMessageLength: 5,
+  questions: [
+    "type",
+    "scope",
+    "subject",
+    "body",
+    "breaking",
+    "issues",
+    // 'lerna'
+  ],
+  scopes: ["Button", "其他"],
+  types: {
+    feat: {
+      description: "新增功能",
+      emoji: "🎸",
+      value: "feat",
     },
-    
-    // 是否允许自定义填写 scope ，设置为 true ，会自动添加两个 scope 类型 [{ name: 'empty', value: false },{ name: 'custom', value: 'custom' }]
-    // allowCustomScopes: true,
-    allowBreakingChanges: ['feat', 'fix'],
-    // skip any questions you want
-    // skipQuestions: [],
-    
-    // subject 限制长度
-    subjectLimit: 100,
-    // breaklineChar: '|', // 支持 body 和 footer
-    // footerPrefix : 'ISSUES CLOSED:'
-    // askForBreakingChangeFirst : true,
+    chore: {
+      description: "编译过程和辅助工具修改",
+      emoji: "🤖",
+      value: "chore",
+    },
+    ci: {
+      description: "持续集成相关修改",
+      emoji: "🎡",
+      value: "ci",
+    },
+    docs: {
+      description: "仅文档修改",
+      emoji: "✏️",
+      value: "docs",
+    },
+    fix: {
+      description: "缺陷修复",
+      emoji: "🐛",
+      value: "fix",
+    },
+    perf: {
+      description: "性能改进",
+      emoji: "⚡️",
+      value: "perf",
+    },
+    refactor: {
+      description: "代码重构",
+      emoji: "💡",
+      value: "refactor",
+    },
+    release: {
+      description: "版本发布",
+      emoji: "🏹",
+      value: "release",
+    },
+    style: {
+      description: "代码美化",
+      emoji: "💄",
+      value: "style",
+    },
+    test: {
+      description: "测例修改",
+      emoji: "💍",
+      value: "test",
+    },
+  },
+  message: {
+    type: "选择您要提交的更改类型：",
+    customScope: "选择此次提交影响的范围：",
+    subject: "输入一个简短的、关于本次提交的描述: \n",
+    body: "输入一个更详细的提交说明: \n ",
+    breaking: "列出本次提交涉及到的重大修改: \n",
+    footer: "此提交关闭的问题, e.g #123:",
+    confirmCommit: "本次提交对其他相关功能的影响\n",
+  },
 };
