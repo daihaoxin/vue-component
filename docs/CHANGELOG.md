@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/daihaoxin/vue-component/compare/v1.3.0...v1.4.0) (2022-09-18)
+
+
+### Features
+
+* **Button:** ssdfasdfasdf ([673ff2d](https://github.com/daihaoxin/vue-component/commit/673ff2d47a9947a6486fd029d6edf1f54df364fd))
+
 ## [1.3.0](https://github.com/daihaoxin/vue-component/compare/v1.2.0...v1.3.0) (2022-09-18)
 
 
