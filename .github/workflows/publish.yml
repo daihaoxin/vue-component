@@ -23,6 +23,8 @@ jobs:
 #      - name: Install dependencies
 #        run: npm ci
       - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm dlx semantic-release
       - name: 发布NPM包
         # 执行发布代码
