@@ -67,10 +67,8 @@ module.exports = {
       },
     ],
     [
+      // 默认不發佈到 npm
       '@semantic-release/npm',
-      {
-        "npmPublish": true
-      }
     ],
     [
       '@semantic-release/git',
