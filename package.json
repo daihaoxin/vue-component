@@ -85,5 +85,9 @@
   ],
   "repository": {
     "url": "https://github.com/daihaoxin/vue-component.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
