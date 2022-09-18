@@ -27,6 +27,7 @@ specifiers:
   '@vue/test-utils': 2.0.2
   '@vue/vue3-jest': 29.1.0
   autoprefixer: 10.4.11
+  conventional-changelog-conventionalcommits: 5.0.0
   cssnano: 5.1.13
   cz-conventional-changelog: 3.3.0
   eslint: 8.23.1
@@ -79,6 +80,7 @@ devDependencies:
   '@vue/test-utils': 2.0.2_vue@3.2.39
   '@vue/vue3-jest': 29.1.0_3o7lezfpykkwtn4hhe7sq6udri
   autoprefixer: 10.4.11_postcss@8.4.16
+  conventional-changelog-conventionalcommits: 5.0.0
   cssnano: 5.1.13_postcss@8.4.16
   cz-conventional-changelog: 3.3.0
   eslint: 8.23.1
