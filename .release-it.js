@@ -42,7 +42,7 @@ module.exports = {
     pushRepo: "",
   },
   npm: {
-    publish: true,
+    publish: false,
     publishPath: ".",
     publishArgs: [],
     tag: null,
