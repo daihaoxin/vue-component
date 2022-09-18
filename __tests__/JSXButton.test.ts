@@ -1,8 +1,8 @@
-import JSXButton from "../src/JSXButton";
-import { mount } from "@vue/test-utils";
+import JSXButton from '../src/JSXButton';
+import { mount } from '@vue/test-utils';
 
-describe("Test JSXButton", () => {
-  test("content", () => {
+describe('Test JSXButton', () => {
+  test('content', () => {
     const Comp = {
       template: `<div><JSXButton></JSXButton></div>`,
     };
@@ -13,6 +13,6 @@ describe("Test JSXButton", () => {
         },
       },
     });
-    expect(wrapper.findComponent({ name: JSXButton.name }).text()).toContain("JSX");
+    expect(wrapper.findComponent({ name: JSXButton.name }).text()).toContain('JSX');
   });
 });

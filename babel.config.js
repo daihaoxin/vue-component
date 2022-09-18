@@ -3,17 +3,17 @@ const { NODE_ENV } = process.env;
 module.exports = {
   presets: [
     [
-      "@babel/preset-env",
+      '@babel/preset-env',
       {
-        modules: NODE_ENV === "test" ? "auto" : false,
+        modules: NODE_ENV === 'test' ? 'auto' : false,
         targets: {
-          node: "current",
+          node: 'current',
         },
       },
     ],
     /* "@babel/preset-react", */
-    "@babel/preset-typescript",
+    '@babel/preset-typescript',
   ],
-  plugins: ["@vue/babel-plugin-jsx"],
+  plugins: ['@vue/babel-plugin-jsx'],
   exclude: [/node_moduels/],
 };

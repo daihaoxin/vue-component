@@ -1,8 +1,8 @@
-import MyButton from "../src/MyButton";
-import { mount } from "@vue/test-utils";
+import MyButton from '../src/MyButton';
+import { mount } from '@vue/test-utils';
 
-describe("Test MyButton", () => {
-  test("content", () => {
+describe('Test MyButton', () => {
+  test('content', () => {
     const Comp = {
       template: `<div><MyButton></MyButton></div>`,
     };
@@ -14,6 +14,6 @@ describe("Test MyButton", () => {
         },
       },
     });
-    expect(wrapper.findComponent({ name: "MyButton" }).text()).toContain("MyButton");
+    expect(wrapper.findComponent({ name: 'MyButton' }).text()).toContain('MyButton');
   });
 });

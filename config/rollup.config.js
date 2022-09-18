@@ -1,17 +1,17 @@
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 // 允许 Rollup 从 JSON 文件导入数据
-import json from "@rollup/plugin-json";
-import babel from "@rollup/plugin-babel";
-import vue from "rollup-plugin-vue";
-import pkg from "../package.json";
-import { terser } from "rollup-plugin-terser";
-import postcss from "rollup-plugin-postcss";
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
+import json from '@rollup/plugin-json';
+import babel from '@rollup/plugin-babel';
+import vue from 'rollup-plugin-vue';
+import pkg from '../package.json';
+import { terser } from 'rollup-plugin-terser';
+import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
 
-const extensions = [".js", ".jsx", ".ts", ".tsx", ".vue", ".cjs", ".mjs", ".es6", ".es"];
-const input = ["src/main.ts"];
+const extensions = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.cjs', '.mjs', '.es6', '.es'];
+const input = ['src/main.ts'];
 const plugins = [
   /**
    * 支持 .vue 文件
@@ -33,7 +33,7 @@ const plugins = [
      *
      * 'bundled' - 如果用rollup构建一个项目的用此参数
      */
-    babelHelpers: "bundled",
+    babelHelpers: 'bundled',
   }),
   resolve({
     extensions,
@@ -44,7 +44,7 @@ const plugins = [
   json(),
   postcss({
     plugins: [autoprefixer(), cssnano()],
-    extract: "css/index.css",
+    extract: 'css/index.css',
   }),
 ];
 export default [
@@ -53,26 +53,26 @@ export default [
     output: [
       {
         file: `dist/${pkg.name}.umd.js`,
-        name: "SmartyUI", // 如果是 iife 或者 umd 格式，需要指定一个全局变量（可以通过window访问）
-        format: "umd",
-        exports: "named",
+        name: 'SmartyUI', // 如果是 iife 或者 umd 格式，需要指定一个全局变量（可以通过window访问）
+        format: 'umd',
+        exports: 'named',
         globals: {
-          vue: "Vue",
+          vue: 'Vue',
         },
       },
       {
         file: `dist/${pkg.name}.umd.min.js`,
-        name: "SmartyUI", // 如果是 iife 或者 umd 格式，需要指定一个全局变量（可以通过window访问）
-        format: "umd",
-        exports: "named",
+        name: 'SmartyUI', // 如果是 iife 或者 umd 格式，需要指定一个全局变量（可以通过window访问）
+        format: 'umd',
+        exports: 'named',
         sourcemap: true,
         globals: {
-          vue: "Vue",
+          vue: 'Vue',
         },
         plugins: [terser()],
       },
     ],
-    external: ["vue"],
+    external: ['vue'],
     plugins,
   },
   {
@@ -80,18 +80,18 @@ export default [
     output: [
       {
         dir: `dist/esm`,
-        format: "esm",
-        exports: "named",
+        format: 'esm',
+        exports: 'named',
         sourcemap: true,
       },
       {
         dir: `dist/cjs`,
-        format: "cjs",
-        exports: "named",
+        format: 'cjs',
+        exports: 'named',
         sourcemap: true,
       },
     ],
-    external: ["vue"],
+    external: ['vue'],
     plugins,
   },
 ];

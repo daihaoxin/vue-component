@@ -1,3 +1,3 @@
-import SFCButton from "./SFCButton.vue";
+import SFCButton from './SFCButton.vue';
 
 export default SFCButton;

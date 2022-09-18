@@ -2,10 +2,10 @@
   <button>Sfc 666</button>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "SfcButton",
+  name: 'SfcButton',
 });
 </script>
 <!--<style lang="less" src="style.less"></style>-->
