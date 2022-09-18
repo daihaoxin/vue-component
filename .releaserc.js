@@ -4,8 +4,14 @@ module.exports = {
      * `channel` is undefined so the default distribution channel will be used
      */
     { name: 'main' },
-    { name: '1.x', range: '1.x', channel: '1.x' }, // Only after the `1.x` is created in the repo
-    { name: '2.x', range: '2.x', channel: '2.x' }, // Only after the `2.x` is created in the repo
+    /**
+     * Only after the `1.x` is created in the repo
+     */
+    { name: '1.x', range: '1.x', channel: '1.x' },
+    /**
+     * Only after the `2.x` is created in the repo
+     */
+    { name: '2.x', range: '2.x', channel: '2.x' },
     /**
      * 如果没有指定 channel , channel默认等于 name
      * The value of channel, if defined as a string, is generated with Lodash template with the variable name available.

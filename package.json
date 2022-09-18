@@ -54,7 +54,6 @@
     "autoprefixer": "10.4.11",
     "conventional-changelog-conventionalcommits": "5.0.0",
     "cssnano": "5.1.13",
-    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.23.1",
     "eslint-config-alloy": "4.6.2",
     "eslint-plugin-vue": "9.5.1",
