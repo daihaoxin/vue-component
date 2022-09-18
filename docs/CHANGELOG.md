@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/daihaoxin/vue-component/compare/v1.4.0...v1.5.0) (2022-09-18)
+
+
+### Features
+
+* **Button:** fjasjdflasjlkdfjasl;f ([d239610](https://github.com/daihaoxin/vue-component/commit/d239610a62f4f8bb0c2cca073b666f21f11fd2c0))
+
 ## [1.4.0](https://github.com/daihaoxin/vue-component/compare/v1.3.0...v1.4.0) (2022-09-18)
 
 
