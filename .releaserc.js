@@ -69,7 +69,7 @@ module.exports = {
     [
       '@semantic-release/npm',
       {
-        npmPublish: false, // 要不要發佈到 npm
+        npmPublish: true, // 要不要發佈到 npm
         tarballDir: '.',
       },
     ],
