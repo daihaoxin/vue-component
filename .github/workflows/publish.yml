@@ -27,7 +27,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          pnpm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
           pnpm dlx semantic-release
       - name: 发布NPM包
         # 执行发布代码
