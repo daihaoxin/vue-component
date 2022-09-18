@@ -76,6 +76,7 @@ module.exports = {
     [
       '@semantic-release/git',
       {
+        // message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes} --no-verify',
         // 寫在 assets 裡的內容可以在 CI 後被 commit 到 git repository 內
         // 預設是 ['CHANGELOG.md', 'package.json', 'package-lock.json', 'npm-shrinkwrap.json']
         assets: ['docs/CHANGELOG.md'],
@@ -94,7 +95,7 @@ module.exports = {
    * CLI arguments: --ci / --no-ci
    * 设置为false可跳过持续集成环境验证，允许从本地机器进行发布。
    */
-  ci: false,
+  ci: true,
   /**
    * Default: v${version}
    */
