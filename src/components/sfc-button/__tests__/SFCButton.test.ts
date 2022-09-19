@@ -1,7 +1,7 @@
 import SFCButton from '..';
 import { mount } from '@vue/test-utils';
 
-describe('Test JSXButton', () => {
+describe('Test SFCButton', () => {
   test('content', () => {
     const Comp = {
       template: `<div><SFCButton></SFCButton></div>`,

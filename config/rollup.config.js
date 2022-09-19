@@ -1,5 +1,6 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import requireContext from 'rollup-plugin-require-context';
 // 允许 Rollup 从 JSON 文件导入数据
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
@@ -11,13 +12,16 @@ import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.cjs', '.mjs', '.es6', '.es'];
-const input = ['src/main.ts'];
+const input = ['src/index.ts'];
 const plugins = [
   /**
    * 支持 .vue 文件
    */
   vue({
     css: true,
+    style: {
+      postcssPlugins: [autoprefixer(), cssnano()],
+    },
   }),
   babel({
     exclude: /node_moduels/,
@@ -40,6 +44,7 @@ const plugins = [
     modulesOnly: true,
     preferredBuiltins: false,
   }), // 告诉 Rollup 如何查找外部模块
+  requireContext(),
   commonjs(), // 支持 commonjs 语法
   json(),
   postcss({

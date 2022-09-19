@@ -8,6 +8,10 @@ export default defineComponent({
       const map = new Map();
       map.set('a', 100);
     };
-    return <button onClick={aa}>JSX 666</button>;
+    return (
+      <button class="test" onClick={aa}>
+        JSX 666
+      </button>
+    );
   },
 });

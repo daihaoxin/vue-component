@@ -72,10 +72,7 @@ module.exports = {
         changelogFile: 'docs/CHANGELOG.md',
       },
     ],
-    [
-      // 默认不發佈到 npm
-      '@semantic-release/npm',
-    ],
+    ['@semantic-release/npm'],
     [
       '@semantic-release/git',
       {

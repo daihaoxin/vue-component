@@ -8,4 +8,4 @@ export default defineComponent({
   name: 'SfcButton',
 });
 </script>
-<!--<style lang="less" src="style.less"></style>-->
+<!--<style lang="less" src="base.less"></style>-->

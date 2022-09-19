@@ -1,4 +1,4 @@
-import JSXButton from '../src/JSXButton';
+import JSXButton from '../index';
 import { mount } from '@vue/test-utils';
 
 describe('Test JSXButton', () => {

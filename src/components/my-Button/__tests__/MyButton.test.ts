@@ -1,4 +1,4 @@
-import MyButton from '../src/MyButton';
+import MyButton from '..';
 import { mount } from '@vue/test-utils';
 
 describe('Test MyButton', () => {
@@ -6,7 +6,6 @@ describe('Test MyButton', () => {
     const Comp = {
       template: `<div><MyButton></MyButton></div>`,
     };
-
     const wrapper = mount(Comp, {
       global: {
         components: {
@@ -14,6 +13,6 @@ describe('Test MyButton', () => {
         },
       },
     });
-    expect(wrapper.findComponent({ name: 'MyButton' }).text()).toContain('MyButton');
+    expect(wrapper.findComponent({ name: MyButton.name }).text()).toContain('MyButton');
   });
 });
