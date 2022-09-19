@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/daihaoxin/vue-component/compare/v1.6.0...v1.7.0) (2022-09-19)
+
+
+### Features
+
+* **Button:** aaaaaaaaaaaaaaaaaa ([59f0c25](https://github.com/daihaoxin/vue-component/commit/59f0c2524672481c269fe64406377c44f8e8d027))
+
 ## [1.6.0](https://github.com/daihaoxin/vue-component/compare/v1.5.0...v1.6.0) (2022-09-18)
 
 
